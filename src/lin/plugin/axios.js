@@ -222,6 +222,20 @@ export function post(url, data = {}, params = {}) {
 
 /**
  * @param {string} url
+ * @param {object} data
+ * @param {object} params
+ */
+export function patch(url, data = {}, params = {}) {
+  return _axios({
+    method: 'patch',
+    url,
+    data,
+    params,
+  })
+}
+
+/**
+ * @param {string} url
  * @param {object} params
  */
 export function get(url, params = {}) {
@@ -250,11 +264,21 @@ export function put(url, data = {}, params = {}) {
  * @param {string} url
  * @param {object} params
  */
-export function _delete(url, params = {}) {
+/* export function _delete(url, params = {}) {
   return _axios({
     method: 'delete',
     url,
     params,
+  })
+} */
+
+// 增加一个data参数
+export function _delete(url, data = {}, params = {}) {
+  return _axios({
+    method: 'delete',
+    url,
+    params,
+    data,
   })
 }
 

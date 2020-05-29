@@ -43,7 +43,13 @@ export default class User {
    * 获取当前用户信息和所拥有的权限
    */
   static async getPermissions() {
-    const info = await get('cms/user/permissions')
+    // const info = await get('cms/user/permissions')
+    const info = {
+      // for test
+      uid: 60,
+      group_id: 1,
+      permissions: ['查询所有日志', '删除轮播图', '删除主题'],
+    }
     const storeUser = store.getters.user === null ? {} : store.getters.user
     return Object.assign({ ...storeUser }, info)
   }

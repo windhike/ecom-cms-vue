@@ -1,5 +1,6 @@
 import adminConfig from './admin'
 import bookConfig from './book' // 引入图书管理路由文件
+import operationConfig from './operation' // 引入运营管理路由文件
 import pluginsConfig from './plugin'
 import Utils from '@/lin/util/util'
 
@@ -46,6 +47,8 @@ let homeRouter = [
   },
   bookConfig,
   adminConfig,
+  // 运营管理的路由配置文件
+  operationConfig,
 ]
 
 const plugins = [...pluginsConfig]
